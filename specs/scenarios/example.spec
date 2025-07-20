@@ -1,9 +1,9 @@
-Getting Started with Gauge
+Hepsiburada E2E tests
 ==========================
 
-* Open the Gauge homepage
 
-Get Started
+Hepsiburada ürün alım regresyon test
 -----------
-* Go to Gauge Get Started Page
-* Ensure installation instructions are available
+* Hepsiburada ana sayfasına git
+* Hepsiburada cookie leri kabul et
+* Arama alanına değer gir ve arama yap

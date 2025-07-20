@@ -1,4 +1,4 @@
-package org.example;
+package util;
 
 public class ElementInfo {
     private String key;

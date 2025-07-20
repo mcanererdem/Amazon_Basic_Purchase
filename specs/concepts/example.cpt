@@ -1,3 +1,13 @@
-go to home a page
+Hepsiburada ana sayfasına git
 ==========================
-* Go to Gauge Get Started Page
+* hepsiburada ana sayfasına git
+
+Hepsiburada cookie leri kabul et
+==========================
+* "cookie_accept_btn" li elemente tıkla
+
+Arama alanına değer gir ve arama yap
+==========================
+* "searchbox_anasayfa" li elemente tıkla
+* "searchbox_inputfield_anasayfa" li elemente "Bilgisayar" değerini yaz
+* "urun_listesi_baslik" li elementin text "Bilgisayar" ni doğrula

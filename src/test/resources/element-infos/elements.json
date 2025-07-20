@@ -5,58 +5,23 @@
     "type": "css"
   },
   {
-    "key": "form_email_missing_input",
-    "value": "userEmail",
+    "key": "cookie_accept_btn",
+    "value": "onetrust-accept-btn-handler",
     "type": "id"
   },
   {
-    "key": "form_gender_input",
-    "value": "//label[text()='Male']",
+    "key": "searchbox_anasayfa",
+    "value": "//div[@class='initialComponent-hk7c_9tvgJ8ELzRuGJwC']",
     "type": "xpath"
   },
   {
-    "key": "form_mobile_input",
-    "value": "userNumber",
-    "type": "id"
-  },
-  {
-    "key": "form_mobile_missing_input",
-    "value": "userNumber",
-    "type": "id"
-  },
-  {
-    "key": "form_dob_input",
-    "value": "//input[@id='dateOfBirthInput']",
+    "key": "searchbox_inputfield_anasayfa",
+    "value": "//input[@placeholder='Ürün, kategori veya marka ara']",
     "type": "xpath"
   },
   {
-    "key": "form_subject_input",
-    "value": "subjectsInput",
-    "type": "id"
-  },
-  {
-    "key": "form_hobby_input",
-    "value": "//label[text()='Sports']",
-    "type": "xpath"
-  },
-  {
-    "key": "form_picture_input",
-    "value": "uploadPicture",
-    "type": "id"
-  },
-  {
-    "key": "form_adress_input",
-    "value": "currentAddress",
-    "type": "id"
-  },
-  {
-    "key": "form_button",
-    "value": "submit",
-    "type": "id"
-  },
-  {
-    "key": "submiting_success_text",
-    "value": "//div[text()='Thanks for submitting the form']",
+    "key": "urun_listesi_baslik",
+    "value": "//h1[@data-test-id = \"header-h1\"]",
     "type": "xpath"
   }
 ]
