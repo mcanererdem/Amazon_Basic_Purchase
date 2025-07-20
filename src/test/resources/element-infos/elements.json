@@ -1,8 +1,8 @@
 [
   {
-    "key": "logo",
-    "value": ".logo-dark > img",
-    "type": "css"
+    "key": "urun_listesi_baslik",
+    "value": "//h1[contains(@data-test-id,'header-h1')]",
+    "type": "xpath"
   },
   {
     "key": "cookie_accept_btn",
@@ -11,7 +11,7 @@
   },
   {
     "key": "searchbox_anasayfa",
-    "value": "//div[@class='initialComponent-hk7c_9tvgJ8ELzRuGJwC']",
+    "value": "//*[@class='initialComponent-hk7c_9tvgJ8ELzRuGJwC']",
     "type": "xpath"
   },
   {
@@ -20,8 +20,48 @@
     "type": "xpath"
   },
   {
-    "key": "urun_listesi_baslik",
-    "value": "//h1[@data-test-id = \"header-h1\"]",
+    "key": "third_listItem",
+    "value": "//h2[@id='product-title-1-3'] ",
+    "type": "xpath"
+  },
+  {
+    "key": "selected_item_title",
+    "value": "//h1[contains(@data-test-id, 'title')]",
+    "type": "xpath"
+  },
+  {
+    "key": "addTo_cart_btn",
+    "value": "//button[contains(@data-test-id,'addToCart')]",
+    "type": "xpath"
+  },
+  {
+    "key": "goto_cart_btn",
+    "value": "//button[contains(text(),'Sepete git')]",
+    "type": "xpath"
+  },
+  {
+    "key": "cart_product_title",
+    "value": "//div[@class='product_name_2Klj3']/a",
+    "type": "xpath"
+  },
+  {
+    "key": "complete_shopping_btn",
+    "value": "continue_step_btn",
+    "type": "id"
+  },
+  {
+    "key": "email_login",
+    "value": "//input[@id='txtUserName']",
+    "type": "xpath"
+  },
+  {
+    "key": "password_login",
+    "value": "//input[@id='txtPassword']",
+    "type": "xpath"
+  },
+  {
+    "key": "login_btn",
+    "value": "//button[@id='btnLogin']",
     "type": "xpath"
   }
 ]

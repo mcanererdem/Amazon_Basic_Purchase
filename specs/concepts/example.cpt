@@ -10,4 +10,25 @@ Arama alanına değer gir ve arama yap
 ==========================
 * "searchbox_anasayfa" li elemente tıkla
 * "searchbox_inputfield_anasayfa" li elemente "Bilgisayar" değerini yaz
-* "urun_listesi_baslik" li elementin text "Bilgisayar" ni doğrula
+* "urun_listesi_baslik" li elementin text "Bilgisayar" i doğrula
+
+Arama listesinden ürün seç
+==========================
+* "third_listItem" li urunu seç ve  tıkla
+
+Seçilen ürünü doğrula
+==========================
+* "selected_item_title" li seçilen ürünün başlığını doğrula
+
+Urunu sepete ekle
+==========================
+* "addTo_cart_btn" li elemente tıkla
+* "goto_cart_btn" li elemente tıkla
+
+Sepette urunu dogrula
+==========================
+* "cart_product_title" li urunun bilgilerini dogrula
+
+Alışverişi tamamla
+==========================
+* "complete_shopping_btn" li elemente tıkla

@@ -1,34 +1,18 @@
 package pages;
 
-import com.thoughtworks.gauge.Gauge;
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import util.ElementHelper;
 import util.ElementStore;
-
-import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class HomePage {
-    private WebDriver driver;
-    private ElementHelper helper;
-    private WebDriverWait waiter;
+public class HomePage extends BasePage {
+    private final String secilenUrunTitle = "";
 
     public HomePage() {
-        driver = Driver.webDriver;
-        helper = new ElementHelper(driver);
-        try {
-            Duration timeoutDuration = Duration.ofSeconds(Long.parseLong(System.getenv("DEFAULT_TIMEOUT")));
-            waiter = new WebDriverWait(driver, timeoutDuration);
-
-        } catch (Exception e) {
-            Gauge.writeMessage(e.getMessage());
-        }
+        super();
     }
 
     public void anasayfayaGit() {
@@ -39,23 +23,28 @@ public class HomePage {
     }
 
     public void elementeTikla(String key) {
-        By element = ElementStore.getBy(key);
-        helper.click(element);
-    }
-
-    public void aramaAlaninaDegerGir(String key, String text) {
-        By searchElement = ElementStore.getBy(key);
-        try {
-            Thread.currentThread().sleep(1000);
-            helper.sendKeys(searchElement, text);
-            helper.sendKeys(searchElement, Keys.ENTER);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        By by = ElementStore.getBy(key);
+        int attempts = 0;
+        while (attempts < 3) {
+            try {
+                waiter.until(ExpectedConditions.elementToBeClickable(by));
+                driver.findElement(by).click();
+                return;
+            } catch (org.openqa.selenium.StaleElementReferenceException e) {
+                attempts++;
+                if (attempts == 3) throw e;
+            }
         }
     }
 
-
-    public void elementTextDogrula(String key, String text) {
-
+    public void aramaAlaninaDegerGir(String key, String text) {
+        By element = ElementStore.getBy(key);
+        try {
+            Thread.sleep(500);
+            helper.clickAndSendKeys(element, text);
+            helper.sendKeys(element, Keys.ENTER);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
