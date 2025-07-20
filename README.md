@@ -1,33 +1,28 @@
-## About this template
+# BasicPuchase Test Otomasyon Projesi
 
-This is a template to get started with a Gauge project that uses Selenium as the driver to interact with a web browser.
+Bu projede Gauge, Selenium ve Gson kullanılarak otomasyon testleri yazılır. Elementler `src/test/resources/element-infos/elements.json` dosyasında anahtar (key), selector (value) ve tür (type: id, css, xpath) olarak tanımlanır.
 
-## Installing this template
+## Element Yönetimi
+- Tüm elementler `ElementStore` sınıfı ile belleğe alınır.
+- Step veya helper fonksiyonlarda sadece element key'i ile işlem yapılır.
+- `ElementStore.getBy("form_button")` ile ilgili elementin Selenium By nesnesi alınır.
 
-    gauge --install java_maven_selenium
-
-## Building on top of this template
-
-### Defining Specifications
-
-* This template includes a sample specification which opens up a browser and navigates to `Get Started` page of Gauge.
-* Add more specifications on top of sample specification.
-
-Read more about [Specifications](http://getgauge.io/documentation/user/current/specifications/README.html)
-
-### Writing the implementations
-
-This is where the java implementation of the steps would be implemented. Since this is a Selenium based project, the java implementation would invoke Selenium APIs as required.
-
-_We recommend considering modelling your tests using the [Page Object](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) pattern, and the [Webdriver support](https://github.com/SeleniumHQ/selenium/wiki/PageFactory) for creating them._
-
-- Note that every Gauge step implementation is annotated with a `Step` attribute that takes the Step text pattern as a parameter.
-Read more about [Step implementations in Java](http://getgauge.io/documentation/user/current/test_code/java/java.html)
-
-### Execution
-
-* You can execute the specification as:
-
+## Örnek Step Kullanımı
+```java
+@Step("Click element with key <elementKey>")
+public void clickElementWithKey(String elementKey) {
+    By by = ElementStore.getBy(elementKey);
+    WebElement element = Driver.webDriver.findElement(by);
+    element.click();
+}
 ```
-mvn test
-```
+
+## Kendi Helper Fonksiyonlarını Yazabilirsin
+ElementStore sadece By nesnesi döndürür. Kendi element helper sınıfını yazıp, Selenium fonksiyonlarını özelleştirebilirsin.
+
+## Gereksinimler
+- Java
+- Maven
+- Gauge
+
+Kısa ve sürdürülebilir bir test otomasyon altyapısı için tasarlanmıştır.
