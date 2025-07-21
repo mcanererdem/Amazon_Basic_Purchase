@@ -30,6 +30,11 @@
     "type": "xpath"
   },
   {
+    "key": "login_n1e2_exception",
+    "value": "//a[@data-test-id = \"inline-alert-label\"]",
+    "type": "xpath"
+  },
+  {
     "key": "addTo_cart_btn",
     "value": "//button[contains(@data-test-id,'addToCart')]",
     "type": "xpath"

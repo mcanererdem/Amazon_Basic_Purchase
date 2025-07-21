@@ -2,7 +2,7 @@ Hepsiburada E2E tests
 ==========================
 
 
-Hepsiburada ürün alım regresyon test
+TS01 -> Hepsiburada ürün alım regresyon test
 ----------------------------------
 * Hepsiburada ana sayfasına git
 * Hepsiburada cookie leri kabul et

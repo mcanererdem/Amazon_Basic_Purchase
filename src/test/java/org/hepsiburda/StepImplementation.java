@@ -47,11 +47,16 @@ public class StepImplementation {
 
     @Step("<email_login>  li elemente <tacabillaki@gmail.com> değerini yaz")
     public void enterEmailAndPassword(String key, String email) {
-        loginPage.enterEmail(key, email);
+        loginPage.enterCredentials(key, email);
     }
 
     @Step("<address_list_address_form> li listeden ilk adresi seç")
-    public void implementation2(String key) {
+    public void ilkAddressSec(String key) {
         cartPage.ilkAdresiSec(key);
+    }
+
+    @Step("<login_btn> li elemente tıkla <> de hata alırsan auth kullan")
+    public void signInToSystem(String key, String expKey) {
+        loginPage.signInToSystemHandleException(key, expKey);
     }
 }
