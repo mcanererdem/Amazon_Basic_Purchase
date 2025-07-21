@@ -31,11 +31,12 @@ public class LoginPage extends BasePage {
 
     public void signInToSystemHandleException(String key, String expKey) {
         By element = ElementStore.getBy(key);
+
         waiter.until(ExpectedConditions.elementToBeClickable(element));
         helper.click(element);
 
         try {
-            Thread.sleep(2 * 1000);
+            Thread.sleep( 1000);
 
             By expElement = ElementStore.getBy(expKey);
             waiter.until(ExpectedConditions.presenceOfElementLocated(expElement));
@@ -59,12 +60,8 @@ public class LoginPage extends BasePage {
                         .build();
 
                 driver.manage().addCookie(authCookie);
-                writeMessage("Manuel kimlik doğrulama çerezi eklendi: " + cookieName);
-
-                Thread.sleep(1000);
-
                 driver.navigate().refresh();
-                writeMessage("Sayfa çerez ile yeniden yüklendi.");
+                waiter.until(ExpectedConditions.jsReturnsValue("return document.readyState == 'complete'"));
 
             }
         } catch (InterruptedException e) {

@@ -17,7 +17,12 @@ public class StepImplementation {
 
     @Step("<searchbox_anasayfa> li elemente tıkla")
     public void elementeTikla(String key) {
-        homePage.elementeTikla(key);
+        try {
+            Thread.sleep(1000);
+            homePage.elementeTikla(key);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Step("<searchbox_inputfield_anasayfa> li elemente <Bilgisayar> değerini yaz")
@@ -55,7 +60,7 @@ public class StepImplementation {
         cartPage.ilkAdresiSec(key);
     }
 
-    @Step("<login_btn> li elemente tıkla <> de hata alırsan auth kullan")
+    @Step("\"login_btn\" li elemente tıkla \"login_n1e2_exception\" de hata alırsan auth kullan")
     public void signInToSystem(String key, String expKey) {
         loginPage.signInToSystemHandleException(key, expKey);
     }
