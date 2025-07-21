@@ -26,7 +26,7 @@
   },
   {
     "key": "selected_item_title",
-    "value": "//h1[contains(@data-test-id, 'title')]",
+    "value": "//a[@data-test-id = \"brand\"]",
     "type": "xpath"
   },
   {
@@ -63,5 +63,40 @@
     "key": "login_btn",
     "value": "//button[@id='btnLogin']",
     "type": "xpath"
+  },
+  {
+    "key": "add_address_btn",
+    "value": "//a[@data-test-class='new-address-link']",
+    "type": "xpath"
+  },
+  {
+    "key": "name_user_address_form",
+    "value": "//input[@placeholder='Ad']",
+    "type": "xpath"
+  },
+  {
+    "key": "lastname_user_address_form",
+    "value": "//input[@placeholder='Soyad']",
+    "type": "xpath"
+  },
+  {
+    "key": "mobile_number_user_address_form",
+    "value": "//input[@class='hb-fznKot bRlTx svmb18j8ym7']",
+    "type": "xpath"
+  },
+  {
+    "key": "option_home_user_address_form",
+    "value": "//input[@name='addressSelect'][1]",
+    "type": "xpath"
+  },
+  {
+    "key": "short_address_name_address_form",
+    "value": "//input[@placeholder='Bina,site,iş yeri,kurum ismi vb.']",
+    "type": "xpath"
+  },
+  {
+    "key": "address_list_address_form",
+    "value": ".customerAccount-SuggestionItem-xBLq8MB1TR15Go3yALwN",
+    "type": "css"
   }
 ]

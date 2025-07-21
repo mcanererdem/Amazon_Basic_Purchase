@@ -49,4 +49,9 @@ public class StepImplementation {
     public void enterEmailAndPassword(String key, String email) {
         loginPage.enterEmail(key, email);
     }
+
+    @Step("<address_list_address_form> li listeden ilk adresi seç")
+    public void implementation2(String key) {
+        cartPage.ilkAdresiSec(key);
+    }
 }

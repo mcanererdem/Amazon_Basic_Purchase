@@ -2,9 +2,11 @@ Hepsiburada ana sayfasına git
 ==========================
 * hepsiburada ana sayfasına git
 
+
 Hepsiburada cookie leri kabul et
 ==========================
 * "cookie_accept_btn" li elemente tıkla
+
 
 Arama alanına değer gir ve arama yap
 ==========================
@@ -12,23 +14,43 @@ Arama alanına değer gir ve arama yap
 * "searchbox_inputfield_anasayfa" li elemente "Bilgisayar" değerini yaz
 * "urun_listesi_baslik" li elementin text "Bilgisayar" i doğrula
 
+
 Arama listesinden ürün seç
 ==========================
 * "third_listItem" li urunu seç ve  tıkla
 
+
 Seçilen ürünü doğrula
 ==========================
 * "selected_item_title" li seçilen ürünün başlığını doğrula
+
 
 Urunu sepete ekle
 ==========================
 * "addTo_cart_btn" li elemente tıkla
 * "goto_cart_btn" li elemente tıkla
 
+
 Sepette urunu dogrula
 ==========================
 * "cart_product_title" li urunun bilgilerini dogrula
 
+
 Alışverişi tamamla
 ==========================
 * "complete_shopping_btn" li elemente tıkla
+
+
+Yeni adres ekle
+==========================
+* "add_address_btn" li elemente tıkla
+
+
+Adres bilgilerini gir
+==========================
+* "name_user_address_form" li elemente "Name" değerini yaz
+* "lastname_user_address_form" li elemente "Lastname" değerini yaz
+* "mobile_number_user_address_form" li elemente "5555555555" değerini yaz
+* "option_home_user_address_form" li elemente tıkla
+* "short_address_name_address_form" li elemente "meclis" değerini yaz
+* "address_list_address_form" li listeden ilk adresi seç

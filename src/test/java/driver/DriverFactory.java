@@ -1,6 +1,7 @@
 package driver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -29,8 +30,11 @@ public class DriverFactory {
 	            if ("Y".equalsIgnoreCase(System.getenv("HEADLESS"))) {
 	                options.addArguments("--headless");
 	                options.addArguments("--disable-gpu");
-	            }
-
+                    options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36");
+                    options.addArguments("--disable-blink-features=AutomationControlled");
+                    options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+                    options.setExperimentalOption("useAutomationExtension", false);
+                }
 	            return new ChromeDriver(options);
         }
     }
