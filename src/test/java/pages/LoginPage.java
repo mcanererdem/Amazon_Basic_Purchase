@@ -61,6 +61,8 @@ public class LoginPage extends BasePage {
                 driver.manage().addCookie(authCookie);
                 writeMessage("Manuel kimlik doğrulama çerezi eklendi: " + cookieName);
 
+                Thread.sleep(1000);
+
                 driver.navigate().refresh();
                 writeMessage("Sayfa çerez ile yeniden yüklendi.");
 
